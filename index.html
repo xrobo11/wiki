@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- style -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-light.min.css" integrity="sha512-bm684OXnsiNuQSyrxuuwo4PHqr3OzxPpXyhT66DA/fhl73e1JmBxRKGnO/nRwWvOZxJLRCmNH7FII+Yn1JNPmg==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hi098123/prism-for-tistory/prism.css">
+    <!-- script -->
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
+    <title>XROBO WIKI - 소프트웨어</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="title">
+            <a>XROBO WIKI</a>
+        </div>
+        <div class="menu">
+            <a href="#" id="toc-open">목차</a>
+            <a href="#" id="toc-now"></a>
+        </div>
+    </nav>
+    
+    <ul id="toc">
+        <li><a id="toc-close" style="text-align:right">X</a></li>
+    </ul>
+
+    <div class="markdown-body">
+        <h1>
+            소프트웨어
+        </h1>
+        <h2 id="1.이벤트" class="chapter">
+            이벤트
+        </h2>
+        <h3 id="이벤트" class="chapter">
+            1. 이벤트
+        </h3>
+        <h4 id="이벤트1" class="chapter">
+            (1) 들어가기
+        </h4>
+        <div class="content">
+            <p>학교에 너무 가기 싫은 날, 나와 똑같이 생긴 누군가가 나타나 오늘 하루만 자신이 학교를 대신 가주겠다고 하면 여러분은 어떻게 할 건가요?</p>
+            <p>너무 행복할 것 같지 않나요?</p>
+            <p>그런데 만약 여러분이 학교에 가지 않고 쉬기로 했다면 여러분은 그 사람에게 학교에서 어떻게 행동해야할지 하나하나 알려주어야 해요.</p>
+            <p>즉,</p>
+            <aside class="callout">
+                <div class="callout-title">
+                    📄 이렇게 행동하세요!
+                </div>
+                <div class="callout-content">
+                    <ul class="callout-list">
+                        <li>9시가 되면 책상 정리를 한다.</li>
+                        <li>선생님이 이름을 부르면 오른손을 든다.</li>
+                        <li>점심시간 종이 울리기 전에 친구가 어깨를 톡톡 치면 급식실에 갈 준비를 한다.</li>
+                    </ul>
+                </div>
+            </aside>
+            <p>처럼 ‘이런 일이 생겼을 땐 이렇게 행동해야 한다’고 알려주어야 합니다.</p>
+            <p>그 사람은 여러분이 학교에서 어떻게 행동하는지 모르니까요!</p>
+            <p>직접 학교에 가는 게 나을지도 모르겠네요🤣</p>
+        </div>
+        
+        <h4 id="이벤트2" class="chapter">
+            (2) 이벤트는 코드를 실행시키는 사건이다
+        </h4>
+        <div class="content">
+            <p>앞의 상상에서 우리는 우리 대신 학교에 가기로 한 그 사람에게 ‘이런 일이 생겼을 땐 이렇게 행동해야 한다’고 알려주어야 했습니다.</p>
+            <p>이때 <span>우리가 어떤 행동을 하도록 만드는 일을 ‘사건’</span>이라고 부르는데요,</p>
+            <p>앞에서 살펴보았던 ‘이렇게 행동하세요!’를 사건과 해야할 일로 구분하여 나타내면 다음과 같습니다.</p>
+            <aside class="callout">
+                <div class="callout-title">
+                    📄 이렇게 행동하세요!
+                </div>
+                <div class="callout-content">
+                    <ul class="callout-list">
+                        <li>9시가 되었다(사건) → 책상 정리를 한다(해야할 일)</li>
+                        <li>선생님이 이름을 불렀다(사건) → 오른손을 든다(해야할 일)</li>
+                        <li>점심시간 종이 울리기 전에 친구가 어깨를 톡톡 쳤다(사건) → 급식실에 갈 준비를 한다(해야할 일)  </li>
+                    </ul>
+                </div>
+            </aside>
+            <p>그러면 이제 ‘이벤트’에 대해 알아볼까요?</p>
+            <p>‘이벤트’는 특정 코드를 실행시키는 사건을 말합니다.</p>
+            <p>예를 들어 마우스로 화면을 클릭하는 이벤트가 일어나면 스피커에서 야옹 소리를 내는 코드가 실행된다고 생각해봅시다.</p>
+            <p>이 경우 마우스로 화면을 클릭할 때마다 ‘야옹’ 소리가 나오게 됩니다.</p>
+            <p>이렇듯 이벤트를 사용하면 코딩으로 아주 재밌는 일들을 많이 할 수 있습니다.</p>
+            <aside class="callout key-concept">
+                <div class="callout-title">
+                    📄 이벤트
+                </div>
+                <div class="callout-content">
+                    <ul class="callout-list">
+                        <li><p>특정 코드를 실행시키는 사건입니다.</p></li>
+                        <li><p>이벤트가 일어나면 이벤트와 연결된 코드가 실행됩니다.</p>
+                            <p><img src="Untitled.png" alt="왼쪽 화살표 키를 누르면 ‘왼쪽 화살표 키 이벤트’에 연결된 코드가 실행됩니다. 그 결과 스프라이트가 시계 반대 방향으로 15도만큼 돕니다. 반면 오른쪽 화살표 키를 누르면 스프라이트가 시계 방향으로 15도 회전합니다."></p>
+                            <p>왼쪽 화살표 키를 누르면 ‘왼쪽 화살표 키 이벤트’에 연결된 코드가 실행됩니다. 그 결과 스프라이트가 시계 반대 방향으로 15도만큼 돕니다. 반면 오른쪽 화살표 키를 누르면 스프라이트가 시계 방향으로 15도 회전합니다.</p></li>
+                        <li><p>코드의 시작입니다.</p>
+                            <p>따라서 스크래치와 XROBO에서 이벤트 블록의 종류는 코드의 시작에만 올 수 있는 <code>모자 블록</code>입니다.</p></li>
+                    </ul>
+                </div>
+            </aside>
+            <p>이벤트를 잘 사용하려면 이벤트에 어떤 것이 있는지 잘 알고 사용하는 것이 중요합니다.</p>
+            <p>이벤트 예시를 살펴볼까요?</p>
+            <aside class="callout">
+                <div class="callout-title">
+                    📄 이벤트 예시 - 스크래치
+                </div>
+                <div class="callout-content">
+                    <ul class="callout-list">
+                        <li>마우스로 화면을 클릭한다(화면을 터치한다).</li>
+                        <li>키보드의 키를 누른다.</li>
+                        <li>플래그를 클릭한다.</li>
+                    </ul>
+                </div>
+            </aside>
+            <aside class="callout">
+                <div class="callout-title">
+                    📄 이벤트 예시 - XROBO
+                </div>
+                <div class="callout-content">
+                    <ul class="callout-list">
+                        <li>CPU보드의 START 버튼을 누른다.</li>
+                    </ul>
+                </div>
+            </aside>
+            <p>예시를 보면 알 수 있듯, 프로그래밍 언어마다 이벤트가 조금씩 다릅니다.</p>
+            <p>따라서 코딩을 할 때 프로그래밍 언어에서 어떤 이벤트를 지원하는지 확인하는 것이 중요합니다.</p>
+        </div>
+
+        <h4 id="이벤트3" class="chapter">
+            (3) XROBO에서 이벤트 흉내내기: 이벤트 루프 만들기
+        </h4>
+        <div class="content">
+            <aside class="callout">
+                <div class="callout-title">
+                    📄 관련 자료
+                </div>
+                <div class="callout-content">
+                    <ul class="callout-list">
+                        <li><a href="#만약-아니면">만약-아니면</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <p>XROBO에는 이벤트가 딱 두 개 있습니다.</p>
+            <p>바로</p>
+            <ul>
+                <li>START 버튼 누르기</li>
+                <li>CPU 전원 켜기</li>
+            </ul>
+            <p>입니다.</p>
+            <p>그리고 이러한 이벤트가 일어났을 때 ‘시작하기’ 이벤트가 실행됩니다.</p>
+            <p>그렇지만 우리는 </p>
+            <ul>
+                <li>리모컨 버튼을 눌렀을 때</li>
+                <li>X키패드 버튼을 눌렀을 때</li>
+                <li>접촉센서에 물체가 가까워졌을 때</li>
+            </ul>
+            <p>를 이벤트처럼 만들 수도 있습니다.</p>
+        </div>
+
+        
+
+        <!-- <md-block src="./src/test1.md">
+            `README.md` was *not* found
+        </md-block> -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

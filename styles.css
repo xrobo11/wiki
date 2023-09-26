@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: rgb(39, 39, 39);
+    position: fixed; /* 고정 위치 스타일 추가 */
+    top: 0;          /* 상단에 붙이기 위한 스타일 */
+    left: 0;         /* 좌측에 붙이기 위한 스타일 */
+    width: 100vw;     /* 전체 너비를 차지하도록 설정 */
+    z-index: 1000;   /* 다른 요소 위에 나타나도록 z-index 설정 */
+}
+
+.navbar .title a {
+    background-color: black;
+    float: center;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 20px;
+}
+
+#toc-open {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    size: 50px;
+    text-decoration: none;
+}
+
+#toc-now {
+    float: left;
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    size: 50px;
+    text-decoration: none;
+}
+
+
+#toc {
+    background-color: rgb(150, 150, 150);
+    list-style-type: none;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: -300px; /* 초기에 왼쪽으로 숨김 */
+    height: 100%;
+    width: 250px; /* 원하는 너비 설정 */
+    transition: left 0.1s ease-out; /* 애니메이션 효과 추가 */
+    overflow-y: auto; /* 스크롤 가능 */
+    z-index: 1000;
+}
+
+#toc li {
+    margin: 20px 15px;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+#toc li:hover {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+#toc li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.level-H1 {
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.level-H2 {
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.level-H3 {
+    padding-bottom: 5px;
+}
+
+.level-H4 {
+    padding-left: 1rem;
+}
+
+/* 메뉴가 활성화 될 때 적용될 스타일 */
+#toc.active {
+    left: 0; /* 메뉴 보이게 */
+}
+
+.markdown-body {
+    position: relative;
+    left: 0;
+    width: 350px;
+    padding: 0% 5% 5% 5%;
+    transition: left 0.1s ease-out; /* 애니메이션 효과 추가 */
+}
+
+
+
+.callout {
+    border-radius: 3px;
+    border: 1px solid rgba(55, 53, 47, 0.16);
+    background-color: transparent;
+    padding: 16px 16px 16px 12px;
+    margin-bottom: 16px;
+    color: rgb(55, 53, 47);
+}
+
+.key-concept{
+    background-color: rgba(251, 243, 219, 1);
+}
+
+.callout-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.callout-content > ul {
+    margin: 0 !important;
+    
+}
+
+.content {
+    padding-left: 1rem;
+}
+
+h4 {
+    margin-top: 10rem;
+}
+
+span {
+    background: rgba(251, 243, 219, 1);
+}
