@@ -75,7 +75,7 @@ window.addEventListener('click', (event) => {
 function toggleToc() {
     const toc = document.getElementById('toc');
     toc.classList.toggle('active');
-    // const contentBody = document.querySelector('.markdown-body');
+    
 
     if (toc.classList.contains('active')) {
         openToc();
