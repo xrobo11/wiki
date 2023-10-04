@@ -1,3 +1,14 @@
+const sort_ascending = (a, b) => {
+    if (a.offsetTop > b.offsetTop) {
+        return 1;
+    }
+    if (a.offsetTop < b.offsetTop) {
+        return -1;
+    }
+    return 0;
+}
+
+
 // TOC 항목 설정
 
 function getNavbarHeight() {
@@ -6,27 +17,10 @@ function getNavbarHeight() {
 }
 
 function getTocList() {
-    const h1s = document.getElementsByTagName("h1");
-    const h2s = document.getElementsByTagName("h2");
-    const h3s = document.getElementsByTagName("h3");
-    const h4s = document.getElementsByTagName("h4");
-    const hAll = [
-        ...h1s,
-        ...h2s,
-        ...h3s,
-        ...h4s,
-    ];
+    const hs = document.getElementsByClassName("chapter");
+    const hAll = [...hs];
 
-    hAll.sort((a, b) => {
-        if (a.offsetTop > b.offsetTop) {
-            return 1;
-        }
-        if (a.offsetTop < b.offsetTop) {
-            return -1;
-        }
-        return 0;
-    })
-    console.log(hAll);
+    hAll.sort(sort_ascending)
 
     const toc = document.getElementById("toc");
     for (h of hAll) {
@@ -38,32 +32,19 @@ function getTocList() {
 }
 
 function setContentPosition(targetElement) {
-    const h1s = document.getElementsByTagName("h1");
-    const h2s = document.getElementsByTagName("h2");
-    const h3s = document.getElementsByTagName("h3");
-    const h4s = document.getElementsByTagName("h4");
-    const hAll = [
-        ...h1s,
-        ...h2s,
-        ...h3s,
-        ...h4s,
-    ];
+    const hAll = document.getElementsByClassName("chapter")
     for (let h of hAll) {
         if (h.innerText === targetElement.innerText) {
-            console.log(targetElement)
             const height = getNavbarHeight();
             window.scrollTo({  top: h.offsetTop, behavior: "smooth" });
-            // document.scrollY = h.offsetTop + height;
+            return true;
         }
     }
-    
+
+    return false;
 }
 
-getTocList();
 
-window.addEventListener('click', (event) => {
-    setContentPosition(event.target);
-});
 
 
 
@@ -76,12 +57,13 @@ function toggleToc() {
     const toc = document.getElementById('toc');
     toc.classList.toggle('active');
     
-
+    lastKwownScrollElement = findTopElementPosition(window.scrollY);
     if (toc.classList.contains('active')) {
         openToc();
     } else{
         closeToc();
     }
+    window.scrollTo({top:lastKwownScrollElement.offsetTop});
 }
 
 function openToc() {
@@ -104,6 +86,9 @@ function setTocOpenView() {
     const toc = document.getElementById('toc');
     const tocWidth = toc.offsetWidth;
 
+    const tocOpen = document.getElementById('toc-open');
+    tocOpen.innerText = '닫기'
+
     const contentBody = document.querySelector('.markdown-body');
     contentBody.style.left = tocWidth + 'px';
     const contentBodyWidth = (document.documentElement.clientWidth - tocWidth) + 'px';
@@ -113,10 +98,24 @@ function setTocOpenView() {
 function setTocCloseView() {
     const toc = document.getElementById('toc');
 
+    const tocOpen = document.getElementById('toc-open');
+    tocOpen.innerText = '목차'
+
     const contentBody = document.querySelector('.markdown-body');
     contentBody.style.left = 0 + 'px';
     const contentBodyWidth = (document.documentElement.clientWidth) + 'px';
     contentBody.style.width = contentBodyWidth;
+}
+
+
+function setTocAndBodyHeight() {
+    const toc = document.getElementById('toc');
+    const contentBody = document.querySelector('.markdown-body');
+
+    const height = getNavbarHeight();
+    toc.style.top = height + 'px';
+    toc.style.height = (window.innerHeight - height) + 'px';
+    contentBody.style.top = (height + 20) + 'px';
 }
 
 function setTocView() {
@@ -125,6 +124,7 @@ function setTocView() {
     
     const height = getNavbarHeight();
     toc.style.top = height + 'px';
+    toc.style.height = (window.innerHeight - height) + 'px';
     contentBody.style.top = (height + 20) + 'px';
 
     const clientWidth = document.documentElement.clientWidth;
@@ -135,16 +135,6 @@ function setTocView() {
     }
 }
 
-const tocOpenElement = document.getElementById('toc-open');
-const tocCloseElement = document.getElementById('toc-close');
-tocOpenElement.onclick = toggleToc;
-tocCloseElement.onclick = toggleToc;
-
-setTocView();
-
-window.addEventListener('resize', function() {
-    setTocView();
-});
 
 
 
@@ -152,50 +142,61 @@ window.addEventListener('resize', function() {
 
 // Scroll 시 content body 위치 설정
 
-function findTargetElementText(stdElementOffsettop, elements) {
+function findTopElementPosition(stdElementOffsettop) {
     let clientTopElement = undefined;
-    for (let elem of elements) {
+    const hs = document.getElementsByClassName('chapter');
+    const p = document.getElementsByTagName("p");
+    const div = document.getElementsByTagName("div");
+    const hAll = [...hs, ...p, ...div];
+    hAll.sort(sort_ascending)
+
+    for (let elem of hAll) {
         if (elem.offsetTop <= stdElementOffsettop) {
             clientTopElement = elem;
         }
     }
-    return clientTopElement ? clientTopElement.innerText : '';
+    return clientTopElement;
+}
+
+function findTargetElement(startPos, scrollPos, elements) {
+    let clientTopElement = undefined;
+    for (let elem of elements) {
+        if (startPos <= elem.offsetTop && elem.offsetTop <= scrollPos) {
+            clientTopElement = elem;
+        }
+    }
+    return clientTopElement;
 }
 
 function setTocNowView(scrollPos) {
     let text = "";
+    let startPos = 0;
 
-    const h1s = document.getElementsByTagName("h1");
-    if (h1s) {
-        const topH1 = findTargetElementText(scrollPos, h1s);
-        if (topH1 != "") {
-            text += topH1;
+    let hns = document.getElementsByTagName("h3");
+    if (hns) {
+        hns = findTargetElement(startPos, scrollPos, hns);
+        if (hns) {
+            text += hns.innerText;
+            startPos = hns.offsetTop;
         }
     }
 
-    const h2s = document.getElementsByTagName("h2");
-    if (h2s) {
-        const topH2 = findTargetElementText(scrollPos, h2s);
-        if (topH2 != "") {
-            text = text + " > " + topH2;
+    const tagNames = ["h4"]
+    for (let tagName of tagNames) {
+        hns = document.getElementsByTagName(tagName);
+        if (hns) {
+            const topHns = findTargetElement(startPos, scrollPos, hns);
+            if (topHns) {
+                text += ` > ${topHns.innerText}`;
+                startPos = topHns.offsetTop;
+
+            } else {
+                break;
+            }
         }
     }
 
-    const h3s = document.getElementsByTagName("h3");
-    if (h3s) {
-        const topH3 = findTargetElementText(scrollPos, h3s);
-        if (topH3 != "") {
-            text = text + " > " + topH3;
-        }
-    }
 
-    const h4s = document.getElementsByTagName("h4");
-    if (h4s) {
-        const topH4 = findTargetElementText(scrollPos, h4s);
-        if (topH4 != "") {
-            text = text + " > " + topH4;
-        }
-    }
     
     const tocNow = document.getElementById("toc-now");
     tocNow.innerText = text;
@@ -203,8 +204,49 @@ function setTocNowView(scrollPos) {
 
 
 
+
+
 let lastKnownScrollPosition = 0;
+let lastKwownScrollElement = undefined;
 let ticking = false;
+
+
+
+// toc list 만들고, list element click event
+
+getTocList();
+
+
+
+
+
+// toggle event
+
+const tocOpenElement = document.getElementById('toc-open');
+const tocCloseElement = document.getElementById('toc-close');
+
+tocOpenElement.onclick = toggleToc;
+tocCloseElement.onclick = toggleToc;
+
+setTocView();
+
+window.addEventListener('resize', function() {
+    setTocView();
+    window.scrollTo({top:lastKwownScrollElement.offsetTop});
+});
+
+window.addEventListener('click', (event) => {
+    const positionChanged = setContentPosition(event.target);
+    if (positionChanged) {
+        setTocAndBodyHeight();
+    } else {
+        // closeToc();
+    }
+});
+
+
+
+// scroll event
 
 document.addEventListener("scroll", (event) => {
     lastKnownScrollPosition = window.scrollY;
@@ -213,6 +255,8 @@ document.addEventListener("scroll", (event) => {
         window.requestAnimationFrame(() => {
             setTocNowView(lastKnownScrollPosition);
             ticking = false;
+            lastKwownScrollElement = findTopElementPosition(lastKnownScrollPosition);
+            setTocAndBodyHeight();
         });
     } else {
         ticking = true;
