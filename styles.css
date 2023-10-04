@@ -16,11 +16,11 @@ body {
     position: fixed; /* 고정 위치 스타일 추가 */
     top: 0;          /* 상단에 붙이기 위한 스타일 */
     left: 0;         /* 좌측에 붙이기 위한 스타일 */
-    width: 100vw;     /* 전체 너비를 차지하도록 설정 */
+    width: 100%;     /* 전체 너비를 차지하도록 설정 */
     z-index: 1000;   /* 다른 요소 위에 나타나도록 z-index 설정 */
 }
 
-.navbar .title a {
+#title-logo {
     background-color: black;
     float: center;
     display: block;
@@ -41,7 +41,17 @@ body {
 }
 
 #toc-now {
-    float: left;
+    float: center;
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    size: 50px;
+    text-decoration: none;
+}
+
+#search {
+    float: right;
     display: block;
     color: white;
     text-align: left;
@@ -54,19 +64,19 @@ body {
 #toc {
     background-color: rgb(150, 150, 150);
     list-style-type: none;
-    padding: 0;
+    padding: 0 0 0 10px;
     position: fixed;
     top: 0;
     left: -300px; /* 초기에 왼쪽으로 숨김 */
     height: 100%;
     width: 250px; /* 원하는 너비 설정 */
     transition: left 0.1s ease-out; /* 애니메이션 효과 추가 */
-    overflow-y: auto; /* 스크롤 가능 */
+    overflow-y: scroll;
     z-index: 1000;
 }
 
 #toc li {
-    margin: 20px 15px;
+    margin: 0.5rem 1rem;
     text-decoration: none;
     color: white;
     display: block;
