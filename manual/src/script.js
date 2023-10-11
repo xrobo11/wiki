@@ -172,7 +172,7 @@ function setTocNowView(scrollPos) {
     let text = "";
     let startPos = 0;
 
-    let hns = document.getElementsByTagName("h3");
+    let hns = document.getElementsByTagName("h2");
     if (hns) {
         hns = findTargetElement(startPos, scrollPos, hns);
         if (hns) {
@@ -181,7 +181,7 @@ function setTocNowView(scrollPos) {
         }
     }
 
-    const tagNames = ["h4"]
+    const tagNames = ["h3", "h4"]
     for (let tagName of tagNames) {
         hns = document.getElementsByTagName(tagName);
         if (hns) {
@@ -196,8 +196,6 @@ function setTocNowView(scrollPos) {
         }
     }
 
-
-    
     const tocNow = document.getElementById("toc-now");
     tocNow.innerText = text;
 }
