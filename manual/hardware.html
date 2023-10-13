@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- style -->
+  <link rel="stylesheet" type="text/css" href="src/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-light.min.css" integrity="sha512-bm684OXnsiNuQSyrxuuwo4PHqr3OzxPpXyhT66DA/fhl73e1JmBxRKGnO/nRwWvOZxJLRCmNH7FII+Yn1JNPmg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hi098123/prism-for-tistory/prism.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;500&display=swap" rel="stylesheet">
+  <title>XROBO WIKI - 하드웨어</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="title"> 
+      <a id="toc-open">목차</a>
+      <a id="search">찾기</a>
+      <a id="title-logo">XROBO WIKI</a>
+    </div>
+    <div class="menu">
+      <a id="toc-now"></a>
+    </div>
+  </nav>
+  
+  <ul id="toc">
+    <li><a id="toc-close" style="text-align:right">X</a></li>
+  </ul>
+
+  <div class="markdown-body">
+
+    <h1 class="chapter">하드웨어</h1>
+
+    <h2 class="chapter">1. 하드웨어</h2>
+    
+    <h3 class="chapter">하드웨어</h3>
+
+    <h4 class="chapter">하드웨어란?</h4>
+    <div class="content">
+      <p>하드웨어는 무엇일까요?</p>
+      <p>하드웨어(hardware)는 두 영어단어 'hard'와 'ware'가 합쳐져서 만들어진 단어로, 컴퓨터 시스템을 구성하는 물리적인(딱딱한, hard) 구성품(제품, ware)을 뜻합니다.</p>
+      <p>쉽게 말해 하드웨어는 컴퓨터나 로봇의 부품입니다.</p>
+      <p>우리에게 머리와 눈과 귀, 팔과 다리가 있는 것처럼, 하드웨어는 컴퓨터와 로봇의 부품인 것이죠.</p>
+      <p>다만 하드웨어만 있다고 해서 로봇이 동작할 수 있는 건 아니에요.</p>
+      <p>우리가 '생각'을 해야 밥을 먹고 학교에 갈 수 있듯, 로봇도 '소프트웨어'가 있어야 움직일 수 있습니다.</p>
+      <p>여기서는 우선 하드웨어에 대해 먼저 배워볼 거예요.</p>
+      <aside class="callout key-concepts">
+        <div class="callout-title">✔️  하드웨어</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>하드웨어는 컴퓨터나 로봇의 부품을 말합니다.</li>
+            <li>컴퓨터의 모니터, 자판부터 로봇에 사용되는 DC모터, 서보모터 등 모든 부품이 하드웨어입니다.</li>
+            <li>소프트웨어가 있어야 하드웨어를 작동시킬 수 있습니다.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <h4 class="chapter">XROBO의 하드웨어</h4>
+    <div class="content">
+      <p>XROBO에는 로봇을 만들기 위한 아주 다양한 하드웨어가 있습니다.</p>
+      <p>CPU보드부터 LED, DC모터, 서보모터, 리모컨, 센서 등등 여러 하드웨어가 있죠.</p>
+      <p>어떤 하드웨어가 있는지 함께 살펴볼까요?</p>
+      <aside class="callout">
+        <div class="callout-title">✔️ XROBO 하드웨어</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>CPU보드
+              <ul>
+                <li>CPU: 우리가 코딩한 프로그램을 읽고 출력 하드웨어와 입력 하드웨어를 제어해주는 하드웨어입니다.</li>
+              </ul>
+            </li>
+            <li>출력 하드웨어
+              <ul>
+                <li>LED (엘이디): 불빛을 낼 수 있는 하드웨어입니다.</li>
+                <li>DC모터 (디씨모터): 자동차 바퀴 등, 특정 부품을 빙글빙글 회전시킬 때 사용할 수 있는 하드웨어입니다.</li>
+                <li>서보모터: 집게발 등, 특정 부품을 원하는 각도만큼 회전시킬 때 사용할 수 있는 하드웨어입니다.</li>
+              </ul>
+            </li>
+            <li>입력 하드웨어
+              <ul>
+                <li>X-키패드 (엑스-키패드): 1~5 사이의 버튼을 눌러 유선으로 숫자 신호를 입력할 수 있는 하드웨어입니다.</li>
+                <li>리모컨: 8개의 버튼을 눌러 CPU보드에게 무선으로 블루투스 신호를 보낼 수 있는 하드웨어입니다.</li>
+                <li>접촉센서: 접촉(부딪힘)을 감지하는 하드웨어입니다.</li>
+                <li>적외선센서: 물체까지의 거리를 측정하는 하드웨어입니다.</li>
+              </ul>
+            </li>
+            <!-- <li>보조 장치
+              <ul>
+                <li>다운로드 보드</li>
+                <li>드라이브 보드</li>
+                <li>RF모듈</li>
+                <li>등등</li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    <h3 class="chapter">하드웨어의 입출력</h3>
+    <h4 class="chapter">입출력 들어가기</h4>
+    <div class="content">
+      <p>하드웨어는 역할에 따라 크게 연산장치(프로세서), 기억장치(메모리), 입력장치, 출력장치 등으로 나뉩니다.</p>
+      <p>비슷하게 XROBO의 하드웨어는 크게 CPU와 출력 하드웨어, 입력 하드웨어 이렇게 3가지로 분류되는데요,</p>
+      <p>이는 각 하드웨어가 '입력'과 '출력' 중 어떤 역할을 하느냐 따라 분류한 것입니다.</p>
+      <p>그렇다면 하드웨어의 분류에 대해 자세히 살펴보기 전, 먼저 입출력에 대해 알아볼까요?</p>
+      <p>우선 우리가 횡단보도를 건널 때의 모습을 생각해봅시다.</p>
+      <p>여러분은 횡단보도를 건널 때 어떻게 하나요?</p>
+      <aside class="callout">
+        <div class="callout-title">✔️ 횡단보도를 건널 때 우리의 모습</div>
+        <div class="callout-content">
+          <ol class="callout-list">
+            <li>먼저 여러분은 눈으로 신호등을 보거나 귀로 차 소리를 들을 것입니다.</li>
+            <li>그 후 보고 들은 것을 바탕으로 신호등을 건너도 될지, 건너면 안 될지 머리로 생각하고,</li>
+            <li>팔과 다리를 움직여 횡단보도를 건너거나 그 자리에 서서 다음 신호를 기다릴 것입니다.</li>
+          </ol>
+        </div>
+      </aside>
+
+      <p>우리가 횡단보도를 건너는 과정은 로봇이 횡단보도를 건너는 과정과 아주 닮아 있습니다.</p>
+      <aside class="callout">
+        <div class="callout-title">✔️ 로봇이 횡단보도를 건너는 과정</div>
+        <div class="callout-content">
+          <ol class="callout-list">
+            <li>로봇의 눈과 귀 역할을 해주는 센서가 주변에서 일어나고 있는 일(신호등의 색깔, 차 소리)을 CPU보드에게 알려주면,</li>
+            <li>그 신호(신호등 색깔과 차 소리)를 바탕으로 뇌의 역할을 하는 CPU보드가 길을 건널지 말지 결정하고,</li>
+            <li>팔과 다리 역할을 하는 DC모터를 제어하여 몸체를 움직입니다. 만약 CPU보드가 길을 건너기로 결정했다면 모터를 움직여서 길을 건너고, 아니라면 모터를 정지하여 다음 신호를 기다립니다.</li>
+          </ol>
+        </div>
+      </aside>
+      <p>여기에서 '입력'과 '출력'을 살펴볼 수 있습니다.</p>
+      <ul>
+        <li>'입력'은 로봇이 센서로 주변에서 일어나고 있는 일을 CPU보드에게 알려주는 것입니다. 우리가 눈으로 신호등의 색깔을 보고 귀로 차 소리를 들어 머리에게 알려주는 것처럼요.</li>
+        <li>'출력'은 로봇의 CPU보드가 DC모터를 제어하여 몸체를 움직이는 것입니다. 우리의 머리가 팔과 다리를 움직여 횡단보도를 건너는 것처럼요.</li>
+      </ul>
+      <p>입력과 출력이 무엇인지 조금 감이 오나요?</p>
+    </div>
+
+    <h4 class="chapter">(1) 입력</h4>
+    <div class="content">
+      <aside class="callout key-concept">
+        <div class="callout-title">✔️ 입력 (INPUT)</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>입력: 하드웨어가 주변 세상(외부)에서 신호를 받아 CPU보드(중앙처리장치)로 보내주는 것입니다.</li>
+            <li>예시: 센서가 신호등의 색깔과 차 소리를 감지하여 CPU보드에게 알려준 것은 입력에 해당합니다.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <h4 class="chapter">(2) 출력</h4>
+    <div class="content">
+      <aside class="callout key-concept">
+        <div class="callout-title">✔️ 출력 (OUTPUT)</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>출력: 중앙처리장치가 신호를 내보내어 출력 하드웨어를 제어하는 것입니다.</li>
+            <li>예시: CPU보드가 모터를 움직이거나 모터를 정지시키는 것이 출력에 해당합니다.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+
+    <h3 class="chapter">하드웨어의 분류</h3>
+    <h4 class="chapter">하드웨어 분류 들어가기</h4>
+    <div class="content">
+      <p>이제 입력과 출력에 대해 배웠으니 본격적으로 XROBO 하드웨어의 분류에 대해 알아봅시다.</p>
+      <p>XROBO 하드웨어는 '입력'과 '출력'에 따라 크게 이렇게 3가지로 나뉩니다.</p>
+      <aside class="callout">
+        <div class="callout-title">✔️ XROBO 하드웨어의 분류</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>입력 하드웨어</li>
+            <li>출력 하드웨어</li>
+            <li>CPU보드</li>
+          </ul>
+        </div>
+      </aside>
+      <p>각각의 역할에 대해 자세히 알고 싶다면 항목을 확인해주세요.</p>
+    </div>
+
+    <h4 class="chapter">(1) 입력 하드웨어</h4>
+    <div class="content">
+      <aside class="callout key-concept">
+        <div class="callout-title">✔️ 입력 하드웨어</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>입력 작업을 하는(외부에서 신호를 받아 CPU보드에게 전해주는) 하드웨어를 '입력 하드웨어'라고 부릅니다.</li>
+            <li>로봇의 눈과 귀 역할을 합니다.</li>
+            <li>X-키패드, 리모컨, 접촉센서, 적외선센서 등등은 입력 하드웨어입니다.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <h4 class="chapter">(2) 출력 하드웨어란?</h4>
+    <div class="content">
+      <aside class="callout key-concept">
+        <div class="callout-title">✔️ 출력 하드웨어</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>출력 작업을 하는(CPU보드에게 받은 신호로 작동하는) 하드웨어를 '출력 하드웨어'라고 부릅니다.</li>
+            <li>로봇의 팔과 다리 역할을 합니다.</li>
+            <li>LED, DC모터, 서보모터 등등은 출력 하드웨어입니다.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <h4 class="chapter">(3) CPU보드</h4>
+    <div class="content">
+      <p>마지막으로 CPU보드에 대해 알아보기 전, 앞서 살펴보았던 '횡단보도 건너기' 예시를 떠올려볼까요?</p>
+      <p>그 예시에서 CPU보드는 신호(신호등 색깔과 차 소리)를 바탕으로 길을 건널지 말지 결정했습니다.</p>
+      <p>우리가 보고 들은 것을 바탕으로 횡단보도를 건너도 될지, 건너면 안 될지 머리로 생각하여 결정한 것처럼요.</p>
+      <p>이는 CPU보드가 우리의 '머리(뇌)' 역할을 하는 하드웨어이기 때문입니다.</p>
+      <aside class="callout">
+        <div class="callout-title">✔️ 하드웨어와 우리 몸의 역할 비교</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>눈과 귀: 입력 하드웨어</li>
+            <li>팔과 다리: 출력 하드웨어</li>
+            <li>머리(뇌): CPU보드</li>
+          </ul>
+        </div>
+      </aside>
+      
+      <p>그렇다면 이제 CPU보드의 역할을 알아볼까요?</p>
+      <aside class="callout key-concept">
+        <div class="callout-title">✔️ CPU보드</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>하드웨어를 제어하고 프로그램을 실행하는 CPU(중앙처리장치)가 있는 하드웨어를 'CPU보드'라고 부릅니다.</li>
+            <li>CPU는 입력 하드웨어가 보낸 입력 신호를 보고 어떤 일을 해야할지 판단합니다. 그 판단에 따라 출력 하드웨어에게 신호를 보내 하드웨어를 움직입니다.</li>
+            <li>로봇의 머리(뇌) 역할을 합니다.</li>
+            <li>CPU는 우리가 코딩한 프로그램에 따라 움직입니다. 예를 들어 우리가 '입력 하드웨어가 보낸 색깔 신호가 초록색이면 모터를 움직이고, 색깔 신호가 빨간색이면 모터를 움직이지 않는다'라고 프로그램을 코딩했다면, CPU는 신호등의 초록색 신호를 보고 모터를 움직여 길을 건널 것입니다. 반면 신호등의 신호가 빨간색이라면 모터를 움직이지 않고 길을 건너지 않을 것입니다.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+
+
+
+    <h2 class="chapter">2. CPU보드</h2>
+    
+    <h3 class="chapter">CPU보드</h3>
+    <h4 class="chapter">CPU보드란?</h4>
+    <div class="content">
+      <aside class="callout key-concept">
+        <div class="callout-title">CPU보드</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>CPU보드는 CPU, LED, 부저 등의 다양한 하드웨어가 포함된 하드웨어입니다.</li>
+            <li>로봇의 머리(뇌) 역할을 합니다.
+              <ul>
+                <li>우리가 코딩한 프로그램을 읽으면서 코드에 적힌 대로 일을 합니다.</li>
+                <li>정확히는 CPU보드 위의 CPU가 이런 일을 합니다.</li>
+              </ul>
+            </li>
+            <li>다양한 하드웨어와 신호를 주고 받습니다.
+              <ul>
+                <li>입력 하드웨어가 보내는 주변 세상에 대한 신호를 받습니다.</li>
+                <li>출력 하드웨어에게 신호를 내보내어 하드웨어를 움직입니다.</li>
+              </ul>
+            </li>
+            <li>CPU보드에 포함되지 않은 다른 하드웨어를 연결할 때는 CPU보드의 '포트'를 사용합니다.
+              <ul>
+                <li>CPU보드에 '출력 하드웨어'를 연결하면 우리가 팔과 다리를 움직이듯, 바퀴를 굴리거나 집게발을 움직일 수 있습니다.</li>
+                <li>CPU보드에 '입력 하드웨어'를 연결하면 우리가 눈과 귀로 무슨 일이 일어나고 있는지 알 수 있듯, 외부에서 일어나는 입력을 감지할 수 있습니다.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </aside>
+           
+    </div>
+    
+
+    <h3 class="chapter">CPU보드의 구조</h3>
+    <h4 class="chapter">CPU보드 구조 들어가기</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">CPU보드 구조</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>(1) 전원 관련 구조</li>
+            <li>(2) 업로드 관련 구조</li>
+            <li>(3) 출력 하드웨어 관련 구조</li>
+            <li>(4) 입력 하드웨어 관련 구조</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <h4 class="chapter">(1) 전원 관련 구조</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">CPU보드 - 전원 관련 구조</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>CPU보드의 전원을 켜거나 프로그램을 시작시키는 것과 관련된 부분입니다.</li>
+            <details><summary>전원 커넥터</summary>
+              <div class="details-content">
+                배터리케이스를 연결합니다.
+              </div>
+            </details>
+            <details><summary>전원 스위치</summary>
+              <div class="details-content">
+                스위치를 눌러 CPU보드의 전원을 켭니다.
+              </div>
+            </details>  
+            <details><summary>START 스위치</summary>
+              <div class="details-content">
+                스위치를 눌러 프로그램을 시작합니다.
+              </div>
+            </details>  
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <h4 class="chapter">(2) 업로드 관련 구조</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">CPU보드 - 업로드 관련 구조</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>CPU보드에 프로그램을 옮기는 것과 관련된 부분입니다.</li>
+            <details><summary>USB 드라이브 포트</summary>
+              <div class="details-content">
+                CPU보드에 프로그램을 업로드할 때 필요한 USB 드라이브를 연결합니다.
+              </div>
+            </details>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <h4 class="chapter">(3) 출력 하드웨어 관련 구조</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">CPU보드 - 출력 하드웨어 관련 구조</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>출력 하드웨어의 연결과 관련된 부분입니다. 특히 출력 하드웨어를 연결하는 포트를 '출력 포트'라고 부릅니다.</li>
+            <details><summary>M포트</summary>
+              <div class="details-content">
+                DC모터만을 연결합니다. 다른 출력 하드웨어는 연결할 수 없습니다.
+              </div>
+            </details>
+            <details><summary>OUT포트</summary>
+              <div class="details-content">
+                LED, 서보모터 등 DC모터를 제외한 출력 하드웨어를 연결합니다.
+              </div>
+            </details>
+            <li>출력 하드웨어의 동작을 돕는 보조 장치 연결을 위한 포트도 있습니다.</li>
+            <details><summary>드라이브 보드 포트</summary>
+              <div class="details-content">
+                DC모터를 작동시킬 때 필요한 모터 드라이브를 연결합니다.
+              </div>
+            </details>  
+          </ul>
+        </div>
+      </aside>
+    </div>
+    <h4 class="chapter">(4) 입력 하드웨어 관련 구조</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">CPU보드 - 입력 하드웨어 관련 구조</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>입력 하드웨어의 연결과 관련된 부분입니다. 특히 입력 하드웨어를 연결하는 포트를 '입력 포트'라고 부릅니다.</li>
+            <details><summary>IN포트</summary>
+              <div class="details-content">
+                X키패드, 센서 등 입력 하드웨어를 연결합니다.
+              </div>
+            </details>
+            <li>입력 하드웨어의 동작을 돕는 보조 장치 연결을 위한 포트도 있습니다.</li>
+            <details><summary>RF모듈 포트</summary>
+              <div class="details-content">
+                리모컨 신호를 주고받을 때 필요한 RF모듈을 연결합니다.
+              </div>
+            </details>  
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+
+
+    <h2 class="chapter">3. 출력 하드웨어</h2>
+
+    <h3 class="chapter">LED </h3>
+    <h4 class="chapter">LED란? </h4>
+    <div class="content"></div>
+    <h4 class="chapter">XROBO의 LED </h4>
+    <div class="content"></div>
+    <h4 class="chapter">LED 연결하기 </h4>
+    <div class="content"></div>
+    <h4 class="chapter">LED 코딩하기 </h4>
+    <div class="content"></div>
+
+    <h3 class="chapter">DC모터 </h3>
+    <h4 class="chapter">DC모터란? </h4>
+    <div class="content"></div>
+    <h4 class="chapter">XROBO의 DC모터 </h4>
+    <div class="content"></div>
+    <h4 class="chapter">DC모터 연결하기 </h4>
+    <div class="content"></div>
+    <h4 class="chapter">DC모터 코딩하기 </h4>
+    <div class="content"></div>
+
+    <h3 class="chapter">서보모터 </h3>
+    <h4 class="chapter">서보모터란? </h4>
+    <div class="content"></div>
+    <h4 class="chapter">XROBO의 서보모터 </h4>
+    <div class="content"></div>
+    <h4 class="chapter">서보모터 연결하기 </h4>
+    <div class="content"></div>
+    <h4 class="chapter">서보모터 코딩하기 </h4>
+    <div class="content"></div>
+    
+
+
+
+    <h2 class="chapter">4. 입력 하드웨어</h2>
+
+    <h3 class="chapter">리모컨 </h3>
+    <h4 class="chapter">리모컨이란? </h4>
+    <div class="content"></div>
+    <h4 class="chapter">XROBO의 리모컨 </h4>
+    <div class="content"></div>
+    <h4 class="chapter">리모컨 코딩하기 </h4>
+    <div class="content"></div>
+    <h4 class="chapter">리모컨 연결하기 </h4>
+    <div class="content"></div>
+    <h4 class="chapter">리모컨이 작동하지 않을 때 </h4>
+    <div class="content"></div>
+    <h4 class="chapter">리모컨 더 알아보기 </h4>
+    <div class="content"></div>
+
+    <h3 class="chapter">X-키패드 </h3>
+    <h4 class="chapter">키패드란? </h4>
+    <div class="content"></div>
+    <h4 class="chapter">XROBO의 X-키패드 </h4>
+    <div class="content"></div>
+    <h4 class="chapter">X-키패드 연결하기 </h4>
+    <div class="content"></div>
+    <h4 class="chapter">X-키패드 코딩하기 </h4>
+    <div class="content"></div>
+
+    <h3 class="chapter">센서 </h3>
+    <h4 class="chapter">센서란? </h4>
+    <div class="content"></div>
+    <h4 class="chapter">XROBO의 센서들 </h4>
+    <div class="content"></div>
+
+    <h3 class="chapter">접촉센서 </h3>
+    <h4 class="chapter">접촉센서란? </h4>
+    <div class="content"></div>
+    <h4 class="chapter">XROBO의 접촉센서 </h4>
+    <div class="content"></div>
+    <h4 class="chapter">접촉센서 연결하기 </h4>
+    <div class="content"></div>
+    <h4 class="chapter">접촉센서 코딩하기 </h4>
+    <div class="content"></div>
+
+    <h3 class="chapter">적외선센서 </h3>
+    <h4 class="chapter">적외선센서란? </h4>
+    <div class="content"></div>
+    <h4 class="chapter">XROBO의 적외선센서 </h4>
+    <div class="content"></div>
+    <h4 class="chapter">적외선센서 연결하기 </h4>
+    <div class="content"></div>
+    <h4 class="chapter">적외선센서 코딩하기 </h4>
+    <div class="content"></div>
+
+
+    <h2 class="chapter">5. 더 알아보기</h2>
+    <h3 class="chapter">입력 하드웨어가 CPU에게 신호를 전달하는 방법 </h3>
+    <h4 class="chapter"></h4>
+    <div class="content"></div>
+    <h3 class="chapter">전자, 전류, 저항, 전압 간단히 알아보기</h3>
+    <h4 class="chapter"> </h4>
+    <div class="content"></div>
+
+
+  </div>
+
+  <script src="src/script.js"></script>
+
+</body>
+</html>
+
