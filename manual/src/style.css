@@ -121,7 +121,7 @@ body {
 .level-H4 {
     margin-top: 0.5rem;
     padding-left: 1.5rem;
-    color: rgb(110, 110, 110);
+    color: rgb(151, 151, 151);
 }
 
 /* 메뉴가 활성화 될 때 적용될 스타일 */
@@ -172,6 +172,11 @@ span {
 }
 
 .callout-content > ul {
+    margin: 0 !important;
+    
+}
+
+.callout-content > ol {
     margin: 0 !important;
     
 }
