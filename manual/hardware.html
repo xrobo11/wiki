@@ -251,7 +251,7 @@
     <h4 class="chapter">CPU보드란?</h4>
     <div class="content">
       <aside class="callout key-concept">
-        <div class="callout-title">CPU보드</div>
+        <div class="callout-title">✔️ CPU보드</div>
         <div class="callout-content">
           <ul class="callout-list">
             <li>CPU보드는 CPU, LED, 부저 등의 다양한 하드웨어가 포함된 하드웨어입니다.</li>
@@ -275,8 +275,7 @@
             </li>
           </ul>
         </div>
-      </aside>
-           
+      </aside>  
     </div>
     
 
@@ -284,7 +283,7 @@
     <h4 class="chapter">CPU보드 구조 들어가기</h4>
     <div class="content">
       <aside class="callout">
-        <div class="callout-title">CPU보드 구조</div>
+        <div class="callout-title">✔️ CPU보드 구조</div>
         <div class="callout-content">
           <ul class="callout-list">
             <li>(1) 전원 관련 구조</li>
@@ -299,7 +298,7 @@
     <h4 class="chapter">(1) 전원 관련 구조</h4>
     <div class="content">
       <aside class="callout">
-        <div class="callout-title">CPU보드 - 전원 관련 구조</div>
+        <div class="callout-title">✔️ CPU보드 - 전원 관련 구조</div>
         <div class="callout-content">
           <ul class="callout-list">
             <li>CPU보드의 전원을 켜거나 프로그램을 시작시키는 것과 관련된 부분입니다.</li>
@@ -326,7 +325,7 @@
     <h4 class="chapter">(2) 업로드 관련 구조</h4>
     <div class="content">
       <aside class="callout">
-        <div class="callout-title">CPU보드 - 업로드 관련 구조</div>
+        <div class="callout-title">✔️ CPU보드 - 업로드 관련 구조</div>
         <div class="callout-content">
           <ul class="callout-list">
             <li>CPU보드에 프로그램을 옮기는 것과 관련된 부분입니다.</li>
@@ -343,7 +342,7 @@
     <h4 class="chapter">(3) 출력 하드웨어 관련 구조</h4>
     <div class="content">
       <aside class="callout">
-        <div class="callout-title">CPU보드 - 출력 하드웨어 관련 구조</div>
+        <div class="callout-title">✔️ CPU보드 - 출력 하드웨어 관련 구조</div>
         <div class="callout-content">
           <ul class="callout-list">
             <li>출력 하드웨어의 연결과 관련된 부분입니다. 특히 출력 하드웨어를 연결하는 포트를 '출력 포트'라고 부릅니다.</li>
@@ -370,7 +369,7 @@
     <h4 class="chapter">(4) 입력 하드웨어 관련 구조</h4>
     <div class="content">
       <aside class="callout">
-        <div class="callout-title">CPU보드 - 입력 하드웨어 관련 구조</div>
+        <div class="callout-title">✔️ CPU보드 - 입력 하드웨어 관련 구조</div>
         <div class="callout-content">
           <ul class="callout-list">
             <li>입력 하드웨어의 연결과 관련된 부분입니다. 특히 입력 하드웨어를 연결하는 포트를 '입력 포트'라고 부릅니다.</li>
@@ -394,21 +393,95 @@
 
     <h2 class="chapter">3. 출력 하드웨어</h2>
 
-    <h3 class="chapter">LED </h3>
+    <h3 class="chapter">기본 LED</h3>
     <h4 class="chapter">LED란? </h4>
-    <div class="content"></div>
-    <h4 class="chapter">XROBO의 LED </h4>
-    <div class="content"></div>
-    <h4 class="chapter">LED 연결하기 </h4>
-    <div class="content"></div>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">✔️ LED (엘이디)</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>LED는 전기로 빛을 만들어내는 하드웨어입니다.</li>
+            <li>&#39;발광 다이오드&#39;라고도 불리며 아주 적은 전력으로도 빛을 낼 수 있습니다.</li>
+            <li>집을 밝혀주는 전등, 책상 위의 스탠드에 LED가 사용됩니다.</li>
+          </ul>
+        </div>
+      </aside>
+
+      <p>XROBO에는 두 가지 LED가 있습니다.</p>
+      <ul>
+        <li>기본 LED: CPU보드의 OUT포트에 연결하여 사용하는 LED입니다.</li>
+        <li>내장 LED: CPU보드에 붙어있는 LED입니다.</li>
+      </ul>
+      <p>여기서는 기본 LED에 대해 다룹니다.</p>
+      <p>내장 LED에 대한 설명은 목차에서 '내장 LED' 항목을 참고해주세요.</p>
+      <aside class="callout key-concept">
+        <div class="callout-title">✔️ 기본 LED</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>파란색 또는 초록색 불빛을 내는 LED입니다.</li>
+            <li>CPU보드의 OUT포트에 연결하여 LED를 켜거나 끌 수 있습니다.</li>
+            <li>LED의 뒤쪽에 3-PIN 케이블을 연결할 수 있는 '핀'이 있습니다. CPU보드에 LED를 연결할 때 이 핀을 사용합니다.</li>
+          </ul>
+        </div>
+      </aside>
+      
+    </div>
+    <h4 class="chapter">기본 LED 연결하기 </h4>
+    <div class="content">
+      <p>기본 LED는 출력 하드웨어이므로 CPU보드의 OUT포트에 연결합니다.</p>
+      <aside class="callout">
+        <div class="callout-title">✔️ CPU보드의 OUT포트에 기본 LED 연결하기</div>
+        <div class="callout-content">
+          <ol class="callout-list">
+            <li>
+              CPU보드의 OUT포트 중 하나에 3-PIN 케이블을 연결합니다.
+              <ul>
+                <li>OUT포트의 작은 화살표 표시에 3-PIN 케이블의 검은색 선이 오도록 연결합니다.</li>
+              </ul>
+            </li>
+            <li>LED 핀에 3-PIN 케이블을 마저 연결합니다.
+              <ul>
+                <li>LED의 핀 6개 중, 가로로 3개에 3-PIN 케이블을 연결합니다.</li>
+                <li>LED 머리 부분에 있는 작은 화살표 표시에 3-PIN 케이블의 검은색 선이 와야합니다.</li>
+                <li>LED 핀에 3-PIN 케이블을 제대로 연결한 경우, LED 뒷면에 표시된 하얀 박스에 3-PIN 케이블의 검은색 선이 위치합니다.</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">✔️ 하나의 OUT포트에 기본 LED 여러개 연결하기</div>
+        <div class="callout-content">
+          <ol class="callout-list">
+            <li>한 LED를 CPU보드에 연결합니다.</li>
+            <li>CPU보드에 연결된 LED의 남은 핀 3개에 또 다른 3-PIN 케이블을 연결합니다.</li>
+            <li>그 케이블을 다른 LED에 연결합니다.</li>
+            <li>또 다른 LED를 연결하고 싶다면, 마지막으로 연결한 LED에 3-PIN 케이블을 연결해 또 다른 LED와 연결합니다.</li>
+          </ol>
+        </div>
+      </aside>
+    </div>
     <h4 class="chapter">LED 코딩하기 </h4>
     <div class="content"></div>
 
     <h3 class="chapter">DC모터 </h3>
     <h4 class="chapter">DC모터란? </h4>
-    <div class="content"></div>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">✔️ DC모터</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>DC모터는 전기로 ‘축(모터에 붙어있는 육각형 모양의 작은 막대)’을 빙글빙글 회전시키는 하드웨어입니다.</li>
+            <li>계속 돌아가야 하는 선풍기 날개를 돌릴 때 사용합니다.</li>
+            <li>날개가 빙글빙글 돌아가는 풍차 로봇을 만들거나 바퀴가 달린 자동차 로봇을 만들고 싶을 때 DC모터를 사용할 수 있습니다.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
     <h4 class="chapter">XROBO의 DC모터 </h4>
-    <div class="content"></div>
+    <div class="content">
+
+    </div>
     <h4 class="chapter">DC모터 연결하기 </h4>
     <div class="content"></div>
     <h4 class="chapter">DC모터 코딩하기 </h4>
@@ -416,7 +489,7 @@
 
     <h3 class="chapter">서보모터 </h3>
     <h4 class="chapter">서보모터란? </h4>
-    <div class="content"></div>
+    <div class="content"></div>                                    
     <h4 class="chapter">XROBO의 서보모터 </h4>
     <div class="content"></div>
     <h4 class="chapter">서보모터 연결하기 </h4>
