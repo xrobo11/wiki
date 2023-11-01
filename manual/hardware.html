@@ -62,7 +62,7 @@
       <p>XROBO에는 로봇을 만들기 위한 아주 다양한 하드웨어가 있습니다.</p>
       <p>CPU보드부터 LED, DC모터, 서보모터, 리모컨, 센서 등등 여러 하드웨어가 있죠.</p>
       <p>어떤 하드웨어가 있는지 함께 살펴볼까요?</p>
-      <aside class="callout">
+      <aside class="callout key-concepts">
         <div class="callout-title">✔️ XROBO 하드웨어</div>
         <div class="callout-content">
           <ul class="callout-list">
@@ -253,6 +253,7 @@
       <aside class="callout key-concept">
         <div class="callout-title">✔️ CPU보드</div>
         <div class="callout-content">
+          <img src="img/hardware/cpu.png" alt="">
           <ul class="callout-list">
             <li>CPU보드는 CPU, LED, 부저 등의 다양한 하드웨어가 포함된 하드웨어입니다.</li>
             <li>로봇의 머리(뇌) 역할을 합니다.
@@ -285,6 +286,7 @@
       <aside class="callout">
         <div class="callout-title">✔️ CPU보드 구조</div>
         <div class="callout-content">
+          <img src="img/hardware/cpu-structure.png" alt="">
           <ul class="callout-list">
             <li>(1) 전원 관련 구조</li>
             <li>(2) 업로드 관련 구조</li>
@@ -348,17 +350,20 @@
             <li>출력 하드웨어의 연결과 관련된 부분입니다. 특히 출력 하드웨어를 연결하는 포트를 '출력 포트'라고 부릅니다.</li>
             <details><summary>M포트</summary>
               <div class="details-content">
+                <img src="img/hardware/cpu-m.png" alt="">
                 DC모터만을 연결합니다. 다른 출력 하드웨어는 연결할 수 없습니다.
               </div>
             </details>
             <details><summary>OUT포트</summary>
               <div class="details-content">
+                <img src="img/hardware/cpu-out.png" alt="">
                 LED, 서보모터 등 DC모터를 제외한 출력 하드웨어를 연결합니다.
               </div>
             </details>
             <li>출력 하드웨어의 동작을 돕는 보조 장치 연결을 위한 포트도 있습니다.</li>
             <details><summary>드라이브 보드 포트</summary>
               <div class="details-content">
+                <img src="img/hardware/cpu-driveboard.png" alt="">
                 DC모터를 작동시킬 때 필요한 모터 드라이브를 연결합니다.
               </div>
             </details>  
@@ -375,6 +380,7 @@
             <li>입력 하드웨어의 연결과 관련된 부분입니다. 특히 입력 하드웨어를 연결하는 포트를 '입력 포트'라고 부릅니다.</li>
             <details><summary>IN포트</summary>
               <div class="details-content">
+                <img src="img/hardware/cpu-in.png" alt="">
                 X키패드, 센서 등 입력 하드웨어를 연결합니다.
               </div>
             </details>
@@ -400,7 +406,7 @@
       <p>출력 하드웨어를 사용할 때는 하드웨어를 케이블로 CPU보드의 &#39;OUT포트&#39;에 연결하여 사용합니다.</p>
       <p>출력 하드웨어 중 DC모터는 출력 하드웨어지만 OUT포트에 연결하지 않고 &#39;M포트&#39;라는 전용 포트에 연결합니다.</p> 
 
-      <aside class="callout">
+      <aside class="callout key-concept">
         <div class="callout-title">✔️ 출력 하드웨어 종류</div>
         <div class="callout-content">
           <table>
@@ -445,11 +451,12 @@
         </div>
       </aside>
       <p>XROBO에는 두 가지 LED가 있습니다.</p>
-      <aside class="callout">
+      <aside class="callout key-concept">
         <div class="callout-title">✔️ XROBO의 LED</div>
         <div class="callout-content">
           <ul class="callout-list">
             <li>기본 LED: OUT포트에 연결하여 사용하는 LED입니다.  </li>
+            <img src="img/hardware/led.png" alt="">
             <li>CPU보드 LED: CPU보드에 포함되어 있어 따로 연결해줄 필요가 없는 LED입니다.  </li>
           </ul>
         </div>
@@ -471,7 +478,7 @@
       <p>출력 하드웨어인 LED를 사용하려면 LED를 CPU보드에 연결해주어야 합니다.</p>
       <p>그러나 모든 LED가 연결이 필요한 것은 아닙니다.</p>
       <p>CPU보드에 내장된 &#39;CPU보드 LED&#39;의 경우, CPU보드에 연결할 필요가 없습니다.</p>
-      <aside class="callout">
+      <aside class="callout key-concept">
         <div class="callout-title">✔️ LED의 연결 필요 여부 확인하기</div>
         <div class="callout-content">
           <table>
@@ -486,7 +493,7 @@
         </div>
       </aside>
       <p>그렇다면 &#39;기본 LED&#39;는 CPU보드에 어떻게 연결할까요?</p>
-      <aside class="callout">
+      <aside class="callout key-concept">
         <div class="callout-title">✔️ CPU보드에 LED 연결하기 </div>
         <div class="callout-content">
           <ol class="callout-list">
@@ -494,13 +501,17 @@
               <ul>
                 3-PIN 케이블의 검은색 선이
                 <li>LED 캡에 그려진 작은 화살표가 가리키는 곳에 오도록 연결</li>
+                <img src="img/hardware/led-connection-led-2.png" alt="">
                 <li>LED 뒷판에 하얀색으로 표시된 부분에 오도록 연결</li>
+                <img src="img/hardware/led-connection-led-5.png" alt="">
               </ul>
             </li>
             <li>CPU보드의 OUT포트에 3-PIN 케이블의 나머지 한쪽 연결하기
               <ul>
+                
                 3-PIN 케이블의 검은색 선이
                 <li>CPU보드 캡에 그려진 작은 화살표가 가리키는 곳에 오도록 연결</li>
+                <img src="img/hardware/led-connection-cpu.png" alt="">
               </ul>
             </li>
           </ol>
@@ -540,22 +551,23 @@
       <p>방법은 간단합니다.</p>
       <p>LED를 비엔나 소시지처럼 줄줄이 연결한 후, 그 중 하나의 LED만 OUT포트에 연결해주는 것입니다.</p>
       <p>그렇다면 &#39;기본 LED&#39;끼리는 어떻게 연결할까요?</p>
-      <aside class="callout">
+      <aside class="callout key-concept">
         <div class="callout-title">✔️ LED끼리 연결하기</div>
         <div class="callout-content">
           <ol class="callout-list">
-            <li>LED 핀에 3-PIN 케이블 연결하기  
+            <li>LED 한 개 CPU보드의 OUT포트에 3-PIN 케이블로 연결하기</li>
+            <li>CPU보드에 연결한 LED의 남은 핀(3개)에 새로운 3-PIN 케이블 연결하기  
               <ul>
                 3-PIN 케이블의 검은색 선이
                 <li>LED 캡에 그려진 작은 화살표가 가리키는 곳에 오도록 연결</li>
+                <img src="img/hardware/led-connection-led-2.png" alt="">
                 <li>LED 뒷판에 하얀색으로 표시된 부분에 오도록 연결</li>
+                <img src="img/hardware/led-connection-led-5.png" alt="">
               </ul>
             </li>
             <li>다른 LED에 3-PIN 케이블의 나머지 한쪽 연결하기
               <ul>
-                3-PIN 케이블의 검은색 선이
-                <li>LED 캡에 그려진 작은 화살표가 가리키는 곳에 오도록 연결</li>
-                <li>LED 뒷판에 하얀색으로 표시된 부분에 오도록 연결</li>
+                <li>LED에 3-PIN 케이블을 연결할 때는 2번을 참고하여 연결</li>
               </ul>
             </li>
           </ol>
@@ -573,11 +585,14 @@
         <div class="callout-content">
           <ul class="callout-list">
             <li>LED 온오프</li>
+            <img src="img/codingblock/output-led-cpu-on.png" alt="">
+            <li>LED 밝기</li>
+            <img src="img/codingblock/output-led-bright.png" alt="">
           </ul>
         </div>
       </aside>
       <p>코딩블록으로는 이런 일들을 할 수 있습니다.</p>
-      <aside class="callout">
+      <aside class="callout key-concepts">
         <div class="callout-title">✔️ 코딩블록으로 할 수 있는 일들</div>
         <div class="callout-content">
           <ul class="callout-list">
@@ -605,12 +620,14 @@
       </aside>
       <p>XROBO에는 두 가지 DC모터가 있습니다.</p>
       <p>두 모터는 회전하는 속도만 다릅니다.</p>
-      <aside class="callout">
+      <aside class="callout key-concept">
         <div class="callout-title">✔️ XROBO의 DC모터</div>
         <div class="callout-content">
           <ul class="callout-list">
             <li>DC모터 130R: 1분에 130번 회전합니다. 로봇을 만들 때 가장 기본적으로 사용되는 DC모터입니다.</li>
+            <img src="img/hardware/motor-130.png" alt="">
             <li>DC모터 300R: 1분에 300번 회전합니다. &#39;DC모터 130R&#39;보다 훨씬 빠릅니다.</li>
+            <img src="img/hardware/motor-300.png" alt="">
           </ul>
         </div>
       </aside>
@@ -632,17 +649,19 @@
       <p>DC모터는 &#39;출력&#39; 하드웨어이지만 &#39;OUT포트&#39;에 연결하지 않고 모터 전용 포트인 &#39;M포트&#39;에 연결합니다.</p>
       <p>DC모터를 연결할 때 DC모터의 종류는 상관이 없습니다.</p>
       <p>그렇다면 &#39;DC모터&#39;는 CPU보드에 어떻게 연결할까요?</p>
-      <aside class="callout">
+      <aside class="callout key-concept">
         <div class="callout-title">✔️ CPU보드에 DC모터 연결하기 </div>
         <div class="callout-content">
           <ol class="callout-list">
             <li>CPU보드에 드라이브 보드 연결하기
+              <img src="img/hardware/cpu-driveboard.png" alt="">
               <ul>
                 <li>CPU보드에 드라이브 보드의 하얀 화살표가 CPU보드 안쪽을 보도록 드라이브 보드를 연결</li>
                 <li>M1이나 M2 포트에 DC모터를 연결할 예정이라면 M1, M2 포트 쪽에 드라이브 보드를 연결하고, M3이나 M4 포트에 선을 연결했다면 M3, M4 포트 쪽에 드라이브 보드를 연결</li>
               </ul>
             </li>
             <li>다른 LED에 3-PIN 케이블의 나머지 한쪽 연결하기
+              <img src="img/hardware/motor-connection-cpu.png" alt="">
               <ul>
                 DC모터의 검은색 선이
                 <li>CPU보드 캡에 그려진 작은 화살표가 가리키는 곳에 오도록 연결</li>
@@ -668,7 +687,11 @@
         <div class="callout-content">
           <ul class="callout-list">
             <li>DC모터 시간</li>
+            <img src="img/codingblock/motor-12-time-pulldown.png" alt="">
+            <img src="img/codingblock/motor-34-time-pulldown.png" alt="">
             <li>DC모터 속도 설정</li>
+            <img src="img/codingblock/motor-12-speed-pulldown.png" alt="">
+            <img src="img/codingblock/motor-34-speed-pulldown.png" alt="">
           </ul>
         </div>
       </aside>
@@ -704,11 +727,12 @@
         </div>
       </aside>
       <p>XROBO에는 한 가지의 서보모터가 있습니다.</p>
-      <aside class="callout">
+      <aside class="callout key-concept">
         <div class="callout-title">✔️ XROBO의 서보모터</div>
         <div class="callout-content">
           <ul class="callout-list">
             <li>서보모터: 축을 0~180도 사이에서 움직일 수 있습니다. OUT포트에 연결하여 사용합니다. 정밀한 각도 조절이 가능합니다.</li>
+            <img src="img/hardware/servo.png" alt="">
           </ul>
         </div>
       </aside>
@@ -724,6 +748,9 @@
           <ul class="callout-list">
             <li>공을 집을 수 있는 '집게발'을 만들 때 서보모터를 사용합니다.</li>
             <li>서보모터의 각도를 바꾸면 서보모터에 연결된 집게발의 집게가 움직이면서 공을 집거나 놓습니다.</li>
+            <img src="img/hardware/servo-example-1-open.jpg" alt="">
+            <img src="img/hardware/servo-example-1-close.jpg" alt="">
+
             <li>우리가 엄지와 검지로 물건을 집을 때 엄지를 고정시킨 채 검지만을 까딱여서 물건을 집을 수 있는 것과 비슷하게 작동합니다.</li>
           </ul>
         </div>
@@ -734,6 +761,8 @@
           <ul class="callout-list">
             <li>물건을 들어올릴 수 있는 '판'을 만들 때 서보모터를 사용합니다.</li>
             <li>서보모터의 각도를 바꾸면 서보모터에 연결된 판이 위로 들리면서 물건을 들어올리거나 내립니다.</li>
+            <img src="img/hardware/sevo-example-2-down.jpg" alt="">
+            <img src="img/hardware/servo-example-2-up.jpg" alt="">
             <li>우리가 팔꿈치를 폈다가 구부리는 것과 비슷하게 동작합니다.</li>
           </ul>
         </div>
@@ -755,7 +784,7 @@
       </aside>
       <p>출력 하드웨어인 서보모터를 사용하려면 서보모터를 CPU보드에 연결해주어야 합니다.</p>
       <p>그렇다면 &#39;서보모터&#39;는 CPU보드에 어떻게 연결할까요?</p>
-      <aside class="callout">
+      <aside class="callout key-concept">
         <div class="callout-title">✔️ CPU보드에 서보모터 연결하기 </div>
         <div class="callout-content">
           <ol class="callout-list">
@@ -763,6 +792,7 @@
               <ul>
                 서보모터 케이블의 검은색 선이
                 <li>LED 캡에 그려진 작은 화살표가 가리키는 곳에 오도록 연결</li>
+                <img src="img/hardware/servo-connection-cpu.png" alt="">
               </ul>
             </li>
           </ol>
@@ -779,6 +809,7 @@
         <div class="callout-content">
           <ul class="callout-list">
             <li>서보모터 각도</li>
+            <img src="img/codingblock/output-servo-pulldown.png" alt="">
           </ul>
         </div>
       </aside>
@@ -805,7 +836,7 @@
       <p>입력 하드웨어가 보낸 신호가 CPU보드로 &#39;들어간다고&#39; 하여 &#39;입력(input)&#39; 하드웨어라고 불립니다.</p>
       <p>입력 하드웨어를 사용할 때는 하드웨어를 케이블로 CPU보드의 &#39;IN포트&#39;에 연결하여 사용합니다.</p>
 
-      <aside class="callout">
+      <aside class="callout key-concept">
         <div class="callout-title">✔️ 입력 하드웨어 종류</div>
         <div class="callout-content">
           <table>
@@ -852,13 +883,15 @@
         </div>
       </aside>
       <p>XROBO에도 로봇을 조종할 때 사용할 수 있는 리모컨이 있습니다.</p>
-      <aside class="callout">
+      <aside class="callout key-concept">
         <div class="callout-title">✔️ XROBO의 리모컨</div>
         <div class="callout-content">
+          <img src="img/hardware/remote.png" alt="">
           <ul class="callout-list">
             <li>1번부터 8번 사이의 버튼을 눌러 리모컨에 연결된 로봇을 무선으로 조종합니다.</li>
             <li>한 번에 여러개의 버튼을 누를 수 있습니다.</li>
             <li>블루투스를 사용합니다. 우리가 버튼을 누르면 리모컨은 CPU보드에게 블루투스 신호를 보냅니다. CPU보드는 리모컨에게서 받은 블루투스 신호를 보고 리모컨의 몇 번 버튼이 눌러졌는지 알 수 있습니다.</li>
+            <img src="img/hardware/remote-bluetooth.png" alt="">
           </ul>
         </div>
       </aside>
@@ -873,8 +906,11 @@
         <div class="callout-content">
           <ul class="callout-list">
             <li>블루투스 1개</li>
+            <img src="img/codingblock/input-bluetooth-1.png" alt="">
             <li>블루투스 2개</li>
+            <img src="img/codingblock/input-bluetooth-2.png" alt="">
             <li>블루투스 4개</li>
+            <img src="img/codingblock/input-bluetooth-4.png" alt="">
           </ul>
         </div>
       </aside>
@@ -896,7 +932,7 @@
       <p>코딩까지 다 했다면 모든 준비가 끝났습니다.</p>
       <p>이제 로봇과 리모컨의 전원을 켜기만 하면 로봇(CPU보드)을 조종할 수 있습니다.</p>
       <p>다만, 아래와 같은 경우 리모컨과 CPU보드를 페어링(연결) 해주어야 합니다.</p>
-      <aside class="callout">
+      <aside class="callout key-concept">
         <div class="callout-title">✔️ 페어링이 필요한 경우</div>
         <div class="callout-content">
           <ul class="callout-list">
@@ -918,7 +954,7 @@
           </ul>
         </div>
       </aside>
-      <aside class="callout">
+      <aside class="callout key-concept">
         <div class="callout-title">✔️ 리모컨 페어링하기 </div>
         <div class="callout-content">
           <ol class="callout-list">
@@ -973,9 +1009,10 @@
         </div>
       </aside>
       <p>XROBO에는 X-키패드(엑스 키패드)라는 키패드 하드웨어가 있습니다.</p>
-      <aside class="callout">
+      <aside class="callout key-concept">
         <div class="callout-title">✔️ XROBO의 X-키패드</div>
         <div class="callout-content">
+          <img src="img/hardware/xkeypad.png" alt="">
           <ul class="callout-list">
             <li>1번부터 5번까지의 버튼이 있습니다.</li>
             <li>한 번에 한 개의 버튼만 누를 수 있습니다.</li>
@@ -1009,6 +1046,7 @@
               </ul>
             </li>
             <li>CPU보드의 IN포트에 3-PIN 케이블의 나머지 한쪽 연결하기
+              <img src="img/hardware/xkeypad-connection-cpu.png" alt="">
               <ul>
                 3-PIN 케이블의 검은색 선이
                 <li>CPU보드 캡에 그려진 작은 화살표가 가리키는 곳에 오도록 연결</li>
@@ -1028,6 +1066,8 @@
         <div class="callout-content">
           <ul class="callout-list">
             <li>X-키패드 버튼</li>
+            <img src="img/codingblock/input-xkeypad.png" alt="">
+
           </ul>
         </div>
       </aside>
@@ -1090,12 +1130,14 @@
 
       <p>XROBO에도 여러 종류의 센서가 있습니다.</p>
 
-      <aside class="callout">
+      <aside class="callout key-concept">
         <div class="callout-title">✔️ XROBO의 센서</div>
         <div class="callout-content">
           <ul class="callout-list">
             <li>접촉센서</li>
+            <img src="img/hardware/contact-front.png" alt="">
             <li>적외선센서</li>
+            <img src="img/hardware/ir-front.png" alt="">
           </ul>
         </div>
       </aside>
@@ -1144,7 +1186,7 @@
       <p>접촉센서는 일종의 버튼입니다.</p>
       <p>버튼이 현재 어떤 상태인지(버튼이 눌러졌다, 버튼이 눌러지지 않았다)를 전기 신호로 전달합니다.</p>
       <aside class="callout">
-        <div class="callout-title">✔️ 키패드</div>
+        <div class="callout-title">✔️ 접촉센서</div>
         <div class="callout-content">
           <ul class="callout-list">
             <li>버튼 접촉을 감지하는 하드웨어</li>
@@ -1153,7 +1195,7 @@
         </div>
       </aside>
       <p>XROBO에도 접촉센서 하드웨어가 있습니다.</p>
-      <aside class="callout">
+      <aside class="callout key-concept">
         <div class="callout-title">✔️ XROBO의 접촉센서</div>
         <div class="callout-content">
           <ul class="callout-list">
@@ -1178,17 +1220,19 @@
         </div>
       </aside>
       <p>입력 하드웨어인 접촉센서를 사용하려면 접촉센서를 CPU보드에 연결해주어야 합니다.</p>
-      <aside class="callout">
+      <aside class="callout key-concept">
         <div class="callout-title">✔️ CPU보드에 접촉센서 연결하기 </div>
         <div class="callout-content">
           <ol class="callout-list">
             <li>접촉센서 핀에 3-PIN 케이블 연결하기
+              <img src="img/hardware/contact-connection-sensor.png" alt="">
               <ul>
                 3-PIN 케이블의 검은색 선이
                 <li>접촉센서 뒷판에 하얀색으로 표시된 부분에 오도록 연결</li>
               </ul>
             </li>
             <li>CPU보드의 IN포트에 3-PIN 케이블의 나머지 한쪽 연결하기
+              <img src="img/hardware/contact-connection-cpu.png" alt="">
               <ul>
                 3-PIN 케이블의 검은색 선이
                 <li>CPU보드 캡에 그려진 작은 화살표가 가리키는 곳에 오도록 연결</li>
@@ -1208,6 +1252,7 @@
         <div class="callout-content">
           <ul class="callout-list">
             <li>접촉센서</li>
+            <img src="img/codingblock/input-contact.png" alt="">
           </ul>
         </div>
       </aside>
@@ -1261,9 +1306,10 @@
         </div>
       </aside>
       <p>XROBO에도 적외선센서 하드웨어가 있습니다.</p>
-      <aside class="callout">
+      <aside class="callout k">
         <div class="callout-title">✔️ XROBO의 적외선센서</div>
         <div class="callout-content">
+          <img src="img/hardware/ir-front.png" alt="">
           <ul class="callout-list">
             <li>물체가 반사시킨 적외선의 세기를 CPU보드에게 전기 신호로 알려줍니다.</li>
             <li>CPU보드는 적외선센서가 보낸 전기 신호를 보고 물체까지의 거리를 알 수 있습니다.</li>
@@ -1285,17 +1331,19 @@
         </div>
       </aside>
       <p>입력 하드웨어인 적외선센서를 사용하려면 적외선센서를 CPU보드에 연결해주어야 합니다.</p>
-      <aside class="callout">
+      <aside class="callout key-concept">
         <div class="callout-title">✔️ CPU보드에 적외선센서 연결하기 </div>
         <div class="callout-content">
           <ol class="callout-list">
             <li>적외선센서 핀에 3-PIN 케이블 연결하기
+              <img src="img/hardware/ir-connection-sensor.png" alt="">
               <ul>
                 3-PIN 케이블의 검은색 선이
                 <li>적외선센서 뒷판에 하얀색으로 표시된 부분에 오도록 연결</li>
               </ul>
             </li>
             <li>CPU보드의 IN포트에 3-PIN 케이블의 나머지 한쪽 연결하기
+              <img src="img/hardware/ir-connection-cpu.png" alt="">
               <ul>
                 3-PIN 케이블의 검은색 선이
                 <li>CPU보드 캡에 그려진 작은 화살표가 가리키는 곳에 오도록 연결</li>
@@ -1315,7 +1363,9 @@
         <div class="callout-content">
           <ul class="callout-list">
             <li>적외선센서 거리 이내</li>
+            <img src="img/codingblock/input-infrared-inner.png" alt="">
             <li>적외선센서 거리 사이</li>
+            <img src="img/codingblock/input-infrared-between.png" alt="">
           </ul>
         </div>
       </aside>
