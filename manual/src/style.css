@@ -40,6 +40,16 @@ body {
     text-decoration: none;
 }
 
+#toc-div {
+    float: left;
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px 14px 0px;
+    size: 50px;
+    text-decoration: none;
+}
+
 #toc-now {
     float: center;
     display: block;
