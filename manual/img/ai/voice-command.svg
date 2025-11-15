@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260">
+  <defs>
+    <linearGradient id="grad-voice" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00b4db" />
+      <stop offset="100%" stop-color="#0083b0" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="260" rx="24" fill="url(#grad-voice)" />
+  <g fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+    <rect x="170" y="82" width="60" height="96" rx="30" />
+    <path d="M200 178v32" />
+    <path d="M156 162c8 24 24 40 44 40s36-16 44-40" opacity="0.7" />
+    <path d="M128 150c12 40 32 68 72 68s60-28 72-68" opacity="0.45" />
+  </g>
+  <text x="200" y="64" fill="#ffffff" font-family="'IBM Plex Sans KR', 'Noto Sans KR', sans-serif" font-size="28" font-weight="600" text-anchor="middle">음성명령</text>
+</svg>

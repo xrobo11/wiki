@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260">
+  <defs>
+    <linearGradient id="grad-live" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6a11cb" />
+      <stop offset="100%" stop-color="#2575fc" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="260" rx="24" fill="url(#grad-live)" />
+  <g fill="#ffffff" opacity="0.9">
+    <rect x="88" y="78" width="224" height="132" rx="16" fill="#ffffff" opacity="0.15" />
+    <path d="M156 110h24v80h-24zM212 110l56 40-56 40z" fill="#ffffff" />
+  </g>
+  <text x="200" y="64" fill="#ffffff" font-family="'IBM Plex Sans KR', 'Noto Sans KR', sans-serif" font-size="28" font-weight="600" text-anchor="middle">라이브 코딩</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260">
+  <defs>
+    <linearGradient id="grad-hand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f46b45" />
+      <stop offset="100%" stop-color="#eea849" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="260" rx="24" fill="url(#grad-hand)" />
+  <g fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
+    <path d="M148 176c32 40 72 40 104 0 16-20 16-56-8-80-6-6-12-10-20-12v-20c0-10-8-18-18-18s-18 8-18 18v16-26c0-10-8-18-18-18s-18 8-18 18v34-22c0-10-8-18-18-18s-18 8-18 18v74" />
+  </g>
+  <text x="200" y="64" fill="#ffffff" font-family="'IBM Plex Sans KR', 'Noto Sans KR', sans-serif" font-size="28" font-weight="600" text-anchor="middle">손모양감지</text>
+</svg>

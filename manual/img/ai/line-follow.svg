@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260">
+  <defs>
+    <linearGradient id="grad-line" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f953c6" />
+      <stop offset="100%" stop-color="#b91d73" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="260" rx="24" fill="url(#grad-line)" />
+  <path d="M72 188c28-44 64-80 128-80s100 36 128 80" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" opacity="0.85" />
+  <path d="M132 92l24-24 24 24" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.85" />
+  <text x="200" y="64" fill="#ffffff" font-family="'IBM Plex Sans KR', 'Noto Sans KR', sans-serif" font-size="28" font-weight="600" text-anchor="middle">라인따라가기</text>
+</svg>
